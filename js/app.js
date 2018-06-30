@@ -1,3 +1,6 @@
+//Instance of currency
+myCurrency = new currency;
+
 if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker
@@ -10,3 +13,7 @@ if ('serviceWorker' in navigator) {
       })
   
   }
+  myCurrency.showCurrency();
+  myCurrency.saveCurrency();
+  myCurrency.getCurrency();
+  
