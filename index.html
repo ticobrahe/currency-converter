@@ -11,38 +11,48 @@
   <title>Currency Converter</title>
 </head>
 <body>
-    <div class="header">
-        <h2>Currency conveter</h2>
+    <div class="heading">
+        <h3>Currency conveter</h3>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <select id="fromCurrency" >
-                    
-                </select>
-                <label>From</label>
-            </div>
-            <div class="col-md-6">
-                    <select id="toCurrency">
+    <div id="error"></div>
+    <div class="wrappers">
+        <div class="container">
+            <div class="row">
+                <h5>From</h5>
+                <div class="col-md-12 col-xs-12" >
+                    <select id="fromCurrency" class="selectTag" >
+                        
+                    </select>
+                </div>
+                <h5>To</h5>
+                <div class="col-md-12 col-xs-12">
+                    <select id="toCurrency" class="selectTag">
                     
                     </select>
-                    <label>To</label>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <input type="number" id="amount"class="form-control" placeholder="Enter an amount">
+                </div>
             </div>
-        </div>
-        <p><input type="number" name="number" id="amount"></p>
-        <button id="calculate">Calculate</button>
+            <div class="btn-btn">
+                <button id="calculate" type ="button" class="cal-btn" >Calculate</button>
+            </div>    
+      </div>
+    </div>
+    <div class="info">
         <div id="loading"><img src="image/loader.gif" alt=""></div>
         <div id="outcome"><p id="result"></p></div>
         <div id=""><p id="test"></p></div>
-
     </div>
+      
+    
   
     
 
-    <div class="item"></div>
+    
 
   <footer class="mt-5 p-3 text-center bg-light">
-    GitHub Finder &copy;
+    Olabiyi Samuel &copy;
   </footer>
   
   <script src="js/idb.js"></script>

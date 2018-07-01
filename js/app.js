@@ -13,7 +13,27 @@ if ('serviceWorker' in navigator) {
       })
   
   }
+  
+
   myCurrency.showCurrency();
   myCurrency.saveCurrency();
-  myCurrency.getCurrency();
+ 
+ //myCurrency.getRate();
+myCurrency.saveRate();
+//myCurrency.retriveRate();
+
+
+
+
+ document.getElementById('calculate').addEventListener('click',  e =>{
+      //Hide result
+     document.getElementById('outcome').style.display ='none';
+  // show loader
+    document.getElementById('loading').style.display ='block';
+    setTimeout(myCurrency.getRate(), 4000);
+    
+ } );
+ 
+
+ 
   
