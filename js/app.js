@@ -4,7 +4,7 @@ myCurrency = new currency;
 if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker
-      .register('./sw.js')
+      .register('/sw.js')
       .then(function(registration) {
         console.log("Service Worker Registered");
       })
@@ -16,23 +16,23 @@ if ('serviceWorker' in navigator) {
   
 
   myCurrency.showCurrency();
-  myCurrency.saveCurrency();
+//   myCurrency.saveCurrency();
  
- //myCurrency.getRate();
-myCurrency.saveRate();
-//myCurrency.retriveRate();
+//  //myCurrency.getRate();
+// myCurrency.saveRate();
+// //myCurrency.retriveRate();
 
 
 
 
- document.getElementById('calculate').addEventListener('click',  e =>{
-      //Hide result
-     document.getElementById('outcome').style.display ='none';
-  // show loader
-    document.getElementById('loading').style.display ='block';
-    setTimeout(myCurrency.getRate(), 4000);
+//  document.getElementById('calculate').addEventListener('click',  e =>{
+//       //Hide result
+//      document.getElementById('outcome').style.display ='none';
+//   // show loader
+//     document.getElementById('loading').style.display ='block';
+//     setTimeout(myCurrency.getRate(), 4000);
     
- } );
+//  } );
  
 
  

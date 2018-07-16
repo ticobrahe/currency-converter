@@ -1,5 +1,5 @@
 body {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -10,16 +10,26 @@ h5 {
     margin: 10px 0 0 15px;
 }
 
+.info{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
 #loading{
     display: none;
+    text-align: center;
 }
 
 #outcome{
-    display: none;
+    /* display: none; */
+    font-weight: bold;
 }
 
 #error{
-    text-align: center;
+    margin-left:23%;
+    color: red;
+    font-size:1rem;
 }
 
 .heading{
@@ -28,10 +38,12 @@ h5 {
   }
 
   .wrappers{
-      width: 60%;
+      max-width: 720px;
       height: auto;
       margin: 0 auto;
       background-color: aliceblue;
+      padding: 20px;
+      border-radius: 10px;
   }
 
   .selectTag{
@@ -54,24 +66,29 @@ h5 {
 
   .btn-btn{
     
-    padding-top: 10px;
+    padding-top: 30px;
   }
 
   .cal-btn{
     width: 8rem;
     height: 3rem;
-    margin: 0, auto;
-  border-radius: 6px;
-  color: #ffffff;
-  font-size: 13px;
-  text-decoration: none;
-  text-align: center;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+    color: #414142;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    margin-left: 35%;
+
   }
 
-  .info{
-      width: auto;
-      height: auto;
-      text-align: center;
+  input[type=number]{
+      width: 100%;
+      border-radius: 4px;
+      height: 30px;
   }
 
   #result{

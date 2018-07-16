@@ -27,23 +27,23 @@ class currency {
       }
 
       //Save currency fetched to inside indexdb
-    saveCurrency(){
-        //calling fetch currency
-        this.fetchCurrency()
-            .then(response => {
-                this.dbPromise().then(db => {
-                if (!db) return;
-                const tx = db.transaction('currency', 'readwrite');
-                const store = tx.objectStore('currency');
-                const data = response.results;
-                for(let key of Object.keys(data)){
-                    store.put(data[key]);
-            }
-                return tx.complete;
-        })
+    // saveCurrency(){
+    //     //calling fetch currency
+    //     this.fetchCurrency()
+    //         .then(response => {
+    //             this.dbPromise().then(db => {
+    //             if (!db) return;
+    //             const tx = db.transaction('currency', 'readwrite');
+    //             const store = tx.objectStore('currency');
+    //             const data = response.results;
+    //             for(let key of Object.keys(data)){
+    //                 store.put(data[key]);
+    //         }
+    //             return tx.complete;
+    //     })
         
-        }).catch( err => console.log('Failed', err));
-      }
+    //     }).catch( err => console.log('Failed', err));
+    //   }
       //display currency object to select tag
       displayCurrency(currency){
         for(let key of Object.keys(currency)){
@@ -57,22 +57,22 @@ class currency {
         }
       }
       //retreiving currency fom indexdb and inserting to select tag
-      getCurrency(){
-          this.dbPromise().then(db => {
-            if (!db ) return;
-            const tx = db.transaction('currency');
-            return tx.objectStore('currency').getAll();
-          }).then(data => {
-                //insert to select tag
-               this.displayCurrency(data);
-        }).catch(err => console.log('something Went Wrong'));
-      }
+    //   getCurrency(){
+    //       this.dbPromise().then(db => {
+    //         if (!db ) return;
+    //         const tx = db.transaction('currency');
+    //         return tx.objectStore('currency').getAll();
+    //       }).then(data => {
+    //             //insert to select tag
+    //            this.displayCurrency(data);
+    //     }).catch(err => console.log('something Went Wrong'));
+    //   }
       //show currency fetched to select tag
       showCurrency(){
           this.fetchCurrency().then(response =>{
             const currency = response.results;
             this.displayCurrency(currency);
-          }).catch(this.getCurrency());
+          }).catch(err => console.log('Something went wrong'));
     }
     //fetching rate from api
     async fetchRate(){
@@ -103,7 +103,7 @@ class currency {
         const from = this.selFrom.value;
         const to = this.selTo.value;
         //console.log(rate);
-        if(amount > 0 && rate){
+        if(amount > 0 & rate){
         //console.log(rateValue);
         let result = parseFloat(rate * amount).toFixed(2);
         //console.log(result);
@@ -111,10 +111,9 @@ class currency {
         document.getElementById('outcome').style.display ='block';
         document.getElementById('loading').style.display ='none';
         document.getElementById('test').innerHTML = `1 ${from} - ${rate.toFixed(2)} ${to}`; 
-        document.getElementById('error').innerHTML =''; 
        }else{
        // document.getElementById('test').innerHTML = `1 ${from} - ${rate.toFixed(2)} ${to}`;
-       document.getElementById('error').innerHTML ='Invalid  Amount'; 
+       document.getElementById('error').innerHTML ='Check your amount'; 
         document.getElementById('outcome').style.display ='none';
         document.getElementById('loading').style.display ='none';
        }
@@ -154,7 +153,7 @@ class currency {
                 this.convertCurrency(rate);
         }).catch(() => {
             document.getElementById('loading').style.display ='none';
-            
+            //alert('OOP Cannot convert offline');
             console.log('failed 000');
         });
     }
