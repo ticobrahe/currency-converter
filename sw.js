@@ -2,7 +2,6 @@ let cacheFiles = [
 	'./',
     './index.html',
 	'./js/idb.js',
-    './js/currency-rate.js',
 	'./js/app.js',
 	'./image/loader.gif',
 	'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic',
@@ -11,7 +10,7 @@ let cacheFiles = [
 ]
 
 // Set a name for the current cache
-var cacheName = 'converter-v1'; 
+var cacheName = 'converter-v4'; 
 
 
 self.addEventListener('install', e => {
@@ -47,7 +46,6 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
 	console.log('[ServiceWorker] Fetch', e.request.url);
     const requesterURL = new URL(e.request.url);
-    console.log(requesterURL.pathname);
     if(requesterURL.origin === location.origin){
         e.respondWith(
             caches.match(e.request).then(response => {

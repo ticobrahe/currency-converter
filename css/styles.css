@@ -21,15 +21,29 @@ h5 {
     text-align: center;
 }
 
-#outcome{
-    /* display: none; */
+
+#result{
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
+#rate{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.errorbox{
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+}
 #error{
-    margin-left:23%;
-    color: red;
+    display: none;
+    color: #D46236;
     font-size:1rem;
+  
+   
+    /* background-color: #FFC300; */
 }
 
 .heading{
@@ -91,9 +105,7 @@ h5 {
       height: 30px;
   }
 
-  #result{
-      font-size: 1.2rem;
-  }
+
 
   #test{
     font-size: 1.2rem;
