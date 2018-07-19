@@ -32,6 +32,7 @@ class currency {
      
     //fecth currencies from cache or network and populate to user
     showCurrency(){
+        //fetch from cache
         caches.match('https://free.currencyconverterapi.com/api/v5/countries').then(responseData => {
             if(responseData){
                 responseData.json().then(response => {
@@ -39,6 +40,7 @@ class currency {
                     this.displayCurrency(currency);
                 });
             }else{
+                //fetch from network
                 fetch('https://free.currencyconverterapi.com/api/v5/countries')
                 .then(responseData => responseData.json())
                 .then(response =>{
@@ -48,9 +50,9 @@ class currency {
             }   
         });
       }
-      //
+      //method that takes rate and convert to another currency
       convertCurrency(rate){
-        console.log(rate);
+       //console.log(rate);
        const showResult = document.getElementById('result');
        const showRate = document.getElementById('rate');
        const amount = document.getElementById('amount').value;
@@ -113,10 +115,10 @@ class currency {
                     return tx.complete;
                 });
              })
-        }).catch(); 
+        }).catch(() => { this.showError('Opp rate not available offline')}); 
     }
 
-    //this.showError('Opp! rate not available')
+   
     //get rate form indexdb and convert, if !rate, convert online.
     calculateCurrency(){
         this.dbPromise().then(db => {
@@ -153,9 +155,10 @@ class currency {
         }) 
     }
   
-    
+
   myCurrency = new currency;
   myCurrency.showCurrency();
+  //convert rate when convert button is clicked
   document.getElementById('calculate').addEventListener('click',  e => {
     // show loader
     document.getElementById('loading').style.display ='block';

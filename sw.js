@@ -10,7 +10,7 @@ let cacheFiles = [
 ]
 
 // Set a name for the current cache
-var cacheName = 'converter-v4'; 
+var cacheName = 'converter-v2'; 
 
 
 self.addEventListener('install', e => {

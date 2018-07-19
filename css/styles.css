@@ -1,9 +1,19 @@
+
 body {
     font-size: 1.4rem;
     line-height: 1.6;
     font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 12px;
 }
 
+.wrappers{
+    max-width: 720px;
+    height: auto;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+}
 
 h5 {
     font-size: 1rem;
@@ -41,23 +51,13 @@ h5 {
     display: none;
     color: #D46236;
     font-size:1rem;
-  
-   
+
     /* background-color: #FFC300; */
 }
 
 .heading{
     text-align: center;
     margin-top: 50px;
-  }
-
-  .wrappers{
-      max-width: 720px;
-      height: auto;
-      margin: 0 auto;
-      background-color: aliceblue;
-      padding: 20px;
-      border-radius: 10px;
   }
 
   .selectTag{
@@ -95,7 +95,7 @@ h5 {
     cursor: pointer;
     font-weight: bold;
     position: relative;
-    margin-left: 35%;
+    margin-left: 30%;
 
   }
 
