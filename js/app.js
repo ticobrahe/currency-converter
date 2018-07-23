@@ -147,10 +147,10 @@ class currency {
   
       navigator.serviceWorker
         .register('/sw.js')
-        .then(function(registration) {
+        .then(registration => {
           console.log("Service Worker Registered");
         })
-        .catch(function(err) {
+        .catch(err => {
           console.log("Service Worker Failed to Register", err);
         }) 
     }

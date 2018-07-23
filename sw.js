@@ -3,9 +3,18 @@ let cacheFiles = [
     './index.html',
 	'./js/idb.js',
 	'./js/app.js',
+	'./manifest.json',
 	'./image/loader.gif',
+	'./image/icons/icon48.png',
+	'./image/icons/icon96.png',
+	'./image/icons/icon128.png',
+	'./image/icons/icon144.png',
+	'./image/icons/icon192.png',
+	'./image/icons/icon256.png',
+	'./image/icons/icon384.png',
+	'./image/icons/icon512.png',
 	'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic',
-	'./css/styles.css' ,
+	'./css/styles.css',
 	'https://free.currencyconverterapi.com/api/v5/countries'
 ]
 
