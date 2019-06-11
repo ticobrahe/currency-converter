@@ -1,0 +1,114 @@
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 12px;
+}
+
+.wrappers{
+    max-width: 720px;
+    height: auto;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h5 {
+    font-size: 1rem;
+    margin: 10px 0 0 15px;
+}
+
+.info{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+#loading{
+    display: none;
+    text-align: center;
+}
+
+
+#result{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#rate{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.errorbox{
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+}
+#error{
+    display: none;
+    color: #D46236;
+    font-size:1rem;
+
+    /* background-color: #FFC300; */
+}
+
+.heading{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .selectTag{
+    width:100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-control{
+    height: 34px;
+    line-height: 1.42857143;
+    margin-top: 30px;
+  }
+
+  .btn-btn{
+    
+    padding-top: 30px;
+  }
+
+  .cal-btn{
+    width: 8rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+    color: #414142;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    margin-left: 30%;
+
+  }
+
+  input[type=number]{
+      width: 100%;
+      border-radius: 4px;
+      height: 30px;
+  }
+
+
+
+  #test{
+    font-size: 1.2rem;
+}
+
+  
